@@ -1,1 +1,16 @@
-// Specific CSS for your home-page
+
+.banner {
+background-image: url(https://picsum.photos/id/1059/1200?blur=5);
+background-size: cover;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+height: 600px;
+}
+
+h1{
+  font-weight: bold;
+}
