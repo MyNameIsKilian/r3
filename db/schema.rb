@@ -10,10 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_25_104524) do
+ActiveRecord::Schema.define(version: 2021_05_25_110307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.text "description"
+    t.string "name"
+    t.string "partial_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "researches", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "solution_id", null: false
+    t.string "query"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_researches_on_category_id"
+    t.index ["solution_id"], name: "index_researches_on_solution_id"
+    t.index ["user_id"], name: "index_researches_on_user_id"
+  end
+
+  create_table "rounds", force: :cascade do |t|
+    t.integer "score"
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_rounds_on_game_id"
+    t.index ["user_id"], name: "index_rounds_on_user_id"
+  end
+
+  create_table "solutions", force: :cascade do |t|
+    t.string "object_name"
+    t.text "content"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_solutions_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +72,10 @@ ActiveRecord::Schema.define(version: 2021_05_25_104524) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "researches", "categories"
+  add_foreign_key "researches", "solutions"
+  add_foreign_key "researches", "users"
+  add_foreign_key "rounds", "games"
+  add_foreign_key "rounds", "users"
+  add_foreign_key "solutions", "categories"
 end
