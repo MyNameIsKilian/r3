@@ -1,7 +1,8 @@
 
 .banner {
-background-image: linear-gradient(rgba(98, 210, 162, 0.3),rgba(18, 111, 77, 0.7)),url(poubelle.jpeg);
+background-image: linear-gradient(rgba(98, 210, 162, 0.3),rgba(18, 111, 77, 0.8)),url(poubelle.jpeg);
 background-size: cover;
+background-position: center;
 text-align: center;
 display: flex;
 flex-direction: column;
@@ -18,7 +19,10 @@ h1{
   font-weight: bold;
 }
 
-.btn-success {
+.btn-success{
   border-radius: 6px;
 }
 
+.btn-light{
+  border-radius: 6px;
+}
