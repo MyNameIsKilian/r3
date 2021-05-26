@@ -5,8 +5,8 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :researches
-  has_many :rounds
+  has_many :researches, dependent: :destroy
+  has_many :rounds, dependent: :destroy
   validates :email, uniqueness: true
   validates :phone_number, length: { in: 8..11 }
 
