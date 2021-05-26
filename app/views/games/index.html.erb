@@ -1,11 +1,8 @@
-
-<h1>Welcome to the R3 Game</h1>
-  <div class = "games-container">
-    <div class="cards-games">
-  <ul>
-    <% @games.each do |game| %>
-      <li><%= game.name %></li>
-    <% end %>
-  </ul>
-   </div>
-  </div>
+<div class="games-container">
+  <h1 id="games-index">R3 Games</h1>
+  <% @games.each do |game| %>
+    <div class="game-button">
+      <%= link_to game.name, game_path(game) %>
+    </div>
+  <% end %>
+</div>
