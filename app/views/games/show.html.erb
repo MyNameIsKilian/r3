@@ -1,7 +1,12 @@
 <div class="games-container">
-  <h1> <%= @game.name %> </h1>
-  <div class="game-description">
-    <p><%= @game.description %></p>
-  </div>
+  <h1><%= @game.name %></h1>
+    <div class="card-trip">
+      <img src="https://350355-1085485-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2020/06/KS2-SCI004-recycling-cut-stick-sorting-activity3.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <p><strong>Le but du jeu : </strong><%= @game.description %> Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou alors comment ca va ? </p>
+        </div>
+      </div>
+    </div>
   <%= link_to "Play !", new_game_round_path(@game), class: "play-button" %>
 </div>
