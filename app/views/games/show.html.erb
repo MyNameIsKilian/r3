@@ -1,0 +1,7 @@
+<div class="games-container">
+  <h1> <%= @game.name %> </h1>
+  <div class="game-description">
+    <p><%= @game.description %></p>
+  </div>
+  <%= link_to "Play !", new_game_round_path(@game), class: "play-button" %>
+</div>
