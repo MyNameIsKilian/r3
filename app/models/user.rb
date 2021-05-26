@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :researches
   has_many :rounds
   validates :email, uniqueness: true
+  validates :phone_number, length: { in: 8..11 }
 
   private
 
