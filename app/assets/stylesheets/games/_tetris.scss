@@ -1,0 +1,37 @@
+.tetris-grid {
+/*   margin: auto; */
+  background-color: white;
+  td {
+    height: 50px;
+    width: 50px;
+    border: solid 2px turquoise;
+  }
+}
+
+.active {
+  background-image: url("box.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.green-trash {
+  background-image: url('green-trash.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.yellow-trash {
+  background-image: url('yellow trash.png');
+  height: 100px !important;
+  background-repeat: no-repeat;
+ /*  background-size: cover; */
+  background-position: bottom;
+}
+
+.blue-trash {
+  background-image: url('blue-trash.png');
+  background-repeat: no-repeat;
+ /*  background-size: cover; */
+  background-position: bottom;
+}

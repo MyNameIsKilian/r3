@@ -1,0 +1,120 @@
+const moveForward = (player) => {
+  const wagon = document.querySelector(`#player${player}-race .active`);
+  if (wagon.nextElementSibling) {
+    wagon.nextElementSibling.classList.add('active');
+    wagon.classList.remove('active');
+  } else {
+    alert(`Player ${player} wins! Play again?`);
+    window.location.reload();
+  }
+};
+
+const moveWagons = (event) => {
+  if (event.key === "q") {
+    moveForward(1);
+  } else if (event.key === "p") {
+    moveForward(2);
+  }
+};
+
+document.addEventListener("keyup", moveWagons);
+
+----------------------------------------------------------------------------------
+
+.racer_table {
+  margin: auto;
+}
+
+.racer_table td {
+  height: 80px;
+  width: 80px;
+  border: 1px solid whitesmoke;
+}
+
+.racer_table td.active {
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#player1_race td.active {
+  background-image: url(images/player_1.png);
+}
+
+#player2_race td.active {
+  background-image: url(images/player_2.png);
+}
+
+td:last-child {
+  background-image: url(images/finish.png);
+  background-size: cover;
+}
+
+td:last-child.active {
+  background-size: 90%, cover;
+  background-position: center, top left;
+}
+
+#player1_race td:last-child.active {
+  background-image: url(images/player_1.png), url('images/finish.png');
+}
+
+#player2_race td:last-child.active {
+  background-image: url(images/player_2.png), url('images/finish.png');
+}
+
+-----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wagon Race 🏎</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="banner">
+      <h1 class="text-center">Wagon Race</h1>
+    </div>
+    <hr>
+    <!-- You race HTML code here -->
+    <table class="racer-table">
+      <tr id="player1-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+      <tr id="player2-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+    </table>
+    <hr>
+    <script src="main.js"></script>
+  </body>
+</html>
