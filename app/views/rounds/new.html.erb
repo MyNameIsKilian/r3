@@ -1,11 +1,14 @@
 <div class="games-container">
   <h2>Score : 0</h2>
-  <!-- <div class="round-content mt-5">
-  <br>
-  <h3>GAME IN CONSTRUCTION, <br> COME BACK IN A WEEK 🤓</h3>
-  <br>
-  <img alt="game in construction" src="https://cdn.dribbble.com/users/527451/screenshots/3115734/safetynow_frame1-drib.gif" width= "350">
-  </div> -->
-  <%= render 'partial_games/tetris' %>
+  <% if params["game_id"] == "1" %>
+    <%= render 'partial_games/tetris' %>
+  <% else %>
+    <div class="round-content mt-5">
+      <br>
+      <h3>GAME IN CONSTRUCTION, <br> COME BACK IN A WEEK 🤓</h3>
+      <br>
+      <img alt="game in construction" src="https://cdn.dribbble.com/users/527451/screenshots/3115734/safetynow_frame1-drib.gif" width= "350">
+    </div>
+  <% end %>
 </div>
 
