@@ -10,7 +10,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 color: white;
-height: 600px;
+height: 90vh;
   img {
     width: 100px;
   }
@@ -22,10 +22,11 @@ h1{
 
 .btn-success{
   border-radius: 6px;
+
 }
 
-.btn-light{
-  border-radius: 6px;
+.banner .btn {
+  color: white;
 }
 
 * {

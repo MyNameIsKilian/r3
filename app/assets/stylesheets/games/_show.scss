@@ -1,0 +1,54 @@
+.games-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: light-gray;
+  height: 90vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: $my-dark-green;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+.play-button {
+  background-color: $my-green;
+  padding: 20px 50px;
+  color: $my-dark-green;
+  font-size: 25px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  position: bottom;
+}
+.card-trip p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+

@@ -1,0 +1,12 @@
+<div class="games-container">
+  <h1><%= @game.name %></h1>
+    <div class="card-trip">
+      <img src="https://image.freepik.com/vecteurs-libre/famille-enfants-regardant-tri-ordures_74855-14017.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <p><strong>Le but du jeu : </strong><%= @game.description %></p>
+        </div>
+      </div>
+    </div>
+  <%= link_to "Play !", new_game_round_path(@game), class: "play-button" %>
+</div>
