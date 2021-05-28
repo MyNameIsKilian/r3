@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
 .banner {
-background-image: linear-gradient(rgba(46, 144, 102, 0.3),rgba(41, 184, 131, 0.8)), asset-url(poubelle.jpeg);
+background-image: linear-gradient(rgba(46, 144, 102, 0.3),rgba(41, 184, 131, 0.8)),  image-url('poubelle.jpeg');
 background-size: cover;
 background-position: center;
 text-align: center;
