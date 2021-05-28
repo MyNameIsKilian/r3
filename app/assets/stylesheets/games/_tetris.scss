@@ -9,20 +9,20 @@
 }
 
 .active {
-  background-image: url("box.png");
+  background-image: image-url("box.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .green-trash {
-  background-image: url('green-trash.png');
+  background-image: image-url('green-trash.png');
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 .yellow-trash {
-  background-image: url('yellow trash.png');
+  background-image: image-url('yellow-trash.png');
   height: 100px !important;
   background-repeat: no-repeat;
  /*  background-size: cover; */
@@ -30,7 +30,7 @@
 }
 
 .blue-trash {
-  background-image: url('blue-trash.png');
+  background-image: image-url('blue-trash.png');
   background-repeat: no-repeat;
  /*  background-size: cover; */
   background-position: bottom;
