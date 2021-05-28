@@ -27,5 +27,18 @@ game2.save!
 game3 = Game.new(name: 'Foolish sorting', description: 'à voir')
 game3.save!
 
+puts 'Creating categories!'
+category1 = Category.new(name: 'household garbage')
+category1.save!
+
+category2 = Category.new(name: 'packaging and paper')
+category2.save!
+
+category3 = Category.new(name: 'box')
+category3.save!
+
+category4 = Category.new(name: 'glass')
+category4.save!
+
 puts "Seed finished"
 
