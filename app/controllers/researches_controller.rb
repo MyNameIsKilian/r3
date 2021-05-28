@@ -5,6 +5,7 @@ class ResearchesController < ApplicationController
   end
 
   def create
+    raise
     @research = Research.new(research_params)
     @research.user = current_user
     @research.solution
