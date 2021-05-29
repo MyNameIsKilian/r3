@@ -16,25 +16,39 @@ const itemMovingLeft = () => {
   }
 };
 
-const itemFalling = () => {
+/*const itemFalling = () => {
   const item = document.querySelector('.active');
   const activeIndex = item.cellIndex;
   const nextTile = item.parentElement.nextElementSibling.children[`${activeIndex}`];
   if (nextTile) {
     item.classList.remove('active');
     nextTile.classList.add('active');
+  };
+};*/
+const itemFalling = () => {
+  const item = document.querySelector('.active');
+  const activeIndex = item.cellIndex;
+  const nextTile = item.parentElement.nextElementSibling.children;
+  if (nextTile.length == 12) {
+    item.classList.remove('active');
+    nextTile[`${activeIndex}`].classList.add('active');
+  } else if (nextTile.length == 3) {
+    item.classList.remove('active');
+    const lastTr = document.getElementById('last-tr');
   }
 };
 
-const deplaceItem = (event) => {
-  if (event.key == "ArrowRight") {
-    itemMovingRight();
-  } else if (event.key == "ArrowLeft") {
-    itemMovingLeft();
-  }
+const movingItem = () => {
+  document.addEventListener("keyup", (event) => {
+    if (event.key === "ArrowRight") {
+      itemMovingRight();
+    } else if (event.key === "ArrowLeft") {
+      itemMovingLeft();
+    };
+  });
 };
 
-document.addEventListener("keyup", (deplaceItem));
+
 
 setInterval(itemFalling, 800);
 
@@ -42,7 +56,6 @@ setInterval(itemFalling, 800);
 
 
 
-export { deplaceItem, itemFalling, itemMovingLeft, itemMovingRight };
 
 
-
+export { movingItem, itemFalling, itemMovingLeft, itemMovingRight };

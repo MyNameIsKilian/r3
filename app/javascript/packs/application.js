@@ -27,7 +27,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { itemFalling, deplaceItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
+import { itemFalling, movingItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -36,7 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   itemMovingRight();
   itemMovingLeft();
   itemFalling();
-
-
+  movingItem();
 });
-
