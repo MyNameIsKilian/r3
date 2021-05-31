@@ -29,20 +29,25 @@ game3 = Game.new(name: 'Foolish sorting', description: 'à voir')
 game3.save!
 
 puts 'Creating categories!'
-category1 = Category.new(name: 'household garbage')
+category1 = Category.new(name: 'plastic')
 category1.save!
 
-category2 = Category.new(name: 'packaging and paper')
+category2 = Category.new(name: 'box')
 category2.save!
 
-category3 = Category.new(name: 'box')
+category3 = Category.new(name: 'glass')
 category3.save!
 
-category4 = Category.new(name: 'glass')
+category4 = Category.new(name: 'packaging and paper')
 category4.save!
 
 category5 = Category.new(name: 'aluminium')
 category5.save!
+
+solution1 = Solution.new(object_name: "carton", category: category1, content: "solution")
+solution1.save!
+research = Research.new(user: kiki, category: category1, solution: solution1, query: "carton")
+research.save!
 
 solutions = File.read(Rails.root.join("lib", "seeds", "R3-recyclage.csv"))
 csv_options = { headers: :first_row }
