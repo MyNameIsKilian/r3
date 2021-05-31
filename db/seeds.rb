@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'csv'
 
 puts 'Creating user!'
 valentina = User.new(first_name: "Valentina", last_name: "forever", email: "valentina@gmail.com", password: "secret", phone_number: "0600000000")
@@ -40,5 +41,21 @@ category3.save!
 category4 = Category.new(name: 'glass')
 category4.save!
 
+category5 = Category.new(name: 'aluminium')
+category5.save!
+
+solutions = File.read(Rails.root.join("lib", "seeds", "R3-recyclage.csv"))
+csv_options = { headers: :first_row }
+csv = CSV.parse(solutions, csv_options)
+csv.each do |row|
+  t = Solution.new
+  t.object_name = row["object_name"]
+  t.content = row["content"]
+  puts row["category_id"]
+  t.category = Category.find(row["category_id"].to_i)
+  t.save!
+end
+
 puts "Seed finished"
+
 
