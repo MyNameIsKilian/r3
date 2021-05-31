@@ -1,8 +1,9 @@
 
-.card-banner {
+.banner {
   background-size: cover;
-  background-position: center;
-  height: 250px;
+  margin: 0;
+  background-position: top;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,3 +14,4 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
