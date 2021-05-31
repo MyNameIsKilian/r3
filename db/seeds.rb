@@ -40,5 +40,9 @@ category3.save!
 category4 = Category.new(name: 'glass')
 category4.save!
 
+solution1 = Solution.new(object_name: "carton", category: category1, content: "solution")
+solution1.save!
+research = Research.new(user: kiki, category: category1, solution: solution1, query: "carton")
+research.save!
 puts "Seed finished"
 

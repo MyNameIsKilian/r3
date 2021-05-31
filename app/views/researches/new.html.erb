@@ -10,11 +10,13 @@
           Find the right location
         </p>
       </div>
-      <input type="text" placeholder="Type the product name" />
+      <%= f.input :query %>
+      <%= f.association :category %>
+      <%= f.button :submit %>
+<!--       <input type="text" placeholder="Type the product name" />
       <input type="text" placeholder="Type the product category" />
-      <input type="text" placeholder="Your location" />
+      <input type="text" placeholder="Your location" /> -->
       <button class="form__btn" id="btn-1">Search</button>
     <% end %>
-
   </main>
   
