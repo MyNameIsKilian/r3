@@ -13,13 +13,13 @@ main {
   text-align: center;
   position: absolute;
   width: 25rem;
-  box-shadow: 0.2rem 0.2rem 0.5rem #359460(51, 51, 51, 0.2);
+  box-shadow: 0.2rem 0.2rem 0.5rem #62D2A2(51, 51, 51, 0.2);
   display: none;
   border-radius: 1rem;
   overflow: hidden;
 }
 .form--header-container {
-  background: linear-gradient(to right, rgb(51, 51, 51), #359460);
+  background: linear-gradient(to right, rgb(14, 155, 96), #62D2A2);
   color: #fff;
   height: 6rem;
   padding: 1rem 0;
@@ -46,7 +46,7 @@ input[type="text"] {
 }
 
 .form__btn {
-  background: #359460;
+  background: #62D2A2;
   color: #fff;
   outline: none;
   border: none;
@@ -61,7 +61,7 @@ input[type="text"] {
 .form--message-text {
   width: 25rem;
   background: #fff;
-  color: #126F4D;
+  color: #62D2A2;
   padding: 2rem 1rem;
   text-align: center;
   font-size: 1.4rem;
