@@ -8,7 +8,7 @@ class ResearchesController < ApplicationController
      @research = Research.new(research_params)
      @research.user = current_user
      @research.solution = Solution.first
-     if @research.save!
+     if @research.save
       redirect_to research_path(@research)
      else
       render :new
@@ -24,4 +24,4 @@ class ResearchesController < ApplicationController
   def research_params
     params.require(:research).permit(:query, :category_id)
   end
-end 
+end
