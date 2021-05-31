@@ -35,6 +35,7 @@ const itemFalling = () => {
   } else if (nextTile.length == 3) {
     item.classList.remove('active');
     const lastTr = document.getElementById('last-tr');
+    if ()
   }
 };
 
