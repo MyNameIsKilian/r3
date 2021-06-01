@@ -1,11 +1,25 @@
 .tetris-grid {
 /*   margin: auto; */
   background-color: white;
+  border-top: solid 1px $my-dark-green;
+  tr {
+    border-left: solid 1px $my-dark-green;
+    border-right: solid 1px $my-dark-green;
+  }
+
   td {
     height: 50px;
     width: 50px;
-    border: solid 2px turquoise;
   }
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 52%;
+  height: 40px;
+  margin-top: 10px;
 }
 
 .active {
@@ -19,6 +33,9 @@
   background-image: image-url('green-trash.png');
   background-repeat: no-repeat;
   background-position: bottom;
+  border-right: hidden;
+  background-color: #f5f6f7;;
+  /* border-top: solid 2px $my-green; */
 }
 
 .yellow-trash {
@@ -27,6 +44,8 @@
   background-repeat: no-repeat;
  /*  background-size: cover; */
   background-position: bottom;
+  border-left: hidden;
+  background-color: #f5f6f7;
 }
 
 .blue-trash {
@@ -34,4 +53,5 @@
   background-repeat: no-repeat;
  /*  background-size: cover; */
   background-position: bottom;
+  background-color: #f5f6f7;
 }

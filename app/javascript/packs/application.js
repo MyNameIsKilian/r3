@@ -29,12 +29,18 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { itemFalling, movingItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
 
+
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
-  itemMovingRight();
-  itemMovingLeft();
-  itemFalling();
-  movingItem();
+  const tetris = document.querySelector(".tetris-grid");
+  if (tetris) {
+    itemMovingRight();
+    itemMovingLeft();
+    movingItem();
+    itemFalling();
+    setInterval(itemFalling, 500);
+  }
 });
