@@ -1,8 +1,45 @@
 //CARDS SOLUTION RECYCLE
-.recycle-solution-card {
-  text-align: center;
-  background: lightblue;
-  height: 300px;
-  margin: 32px 0;
+// .recycle-solution-card {
+//   text-align: center;
+//   background: rgba(94, 236, 189, 0.972);
+//   height: 300px;
+//   margin: 42px 0;
+//   border-radius: 25px;
+// }
+
+.card-solution {
+  overflow: hidden;
+  height: 190px;
+  margin: 105px 0;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.card-solution img {
+  height: 70%;
+  width: 165px;
+  object-fit: cover;
+}
+
+.card-solution h2 {
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.card-solution p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 64px;
+  margin-top: 8px;
+}
+
+.card-solution .card-solution-description {
+  padding: 16px;
+
 }
