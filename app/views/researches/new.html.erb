@@ -1,20 +1,12 @@
 
-  <main>
-
-    <%= simple_form_for @research, url: researches_path, method: "POST", html: { class: 'form form-active' }  do |f| %>
+  <div class="container">
+    <%= simple_form_for @research do |f| %>
       <div class="form--header-container">
-        <h1 class="form--header-title">
-          What do you want to recycle ?
-        </h1>
-          <p class="form--header-text">
-          Find the right location
-        </p>
+        <h1 class="form--header-title">What do you want to recycle ?</h1>
+        <p class="form--header-text">Find the right location</p>
       </div>
       <%= f.input :query %>
       <%= f.association :category %>
-      <%= f.button :submit , class: "form__btn"%>
-<!--       <input type="text" placeholder="Type the product name" />
-      <input type="text" placeholder="Type the product category" />
-      <input type="text" placeholder="Your location" /> -->
+      <%= f.button :submit, class: "form__btn"%>
     <% end %>
-  </main>
+  </div>
