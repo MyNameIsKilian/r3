@@ -7,7 +7,13 @@ class ResearchesController < ApplicationController
   def create
      @research = Research.new(research_params)
      @research.user = current_user
-     @research.solution = Solution.first
+
+
+     # appel a pg search avec  @research.query
+     @research.solution = Solution.search_by_object_name(@research.query).first
+
+
+
      if @research.save
       redirect_to research_path(@research)
      else
