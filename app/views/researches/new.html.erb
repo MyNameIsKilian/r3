@@ -1,7 +1,7 @@
 
   <main>
 
-    <%= simple_form_for @research, url: researches_path, method: :post, html: { class: 'form form-active' }  do |f| %>
+    <%= simple_form_for @research, url: researches_path, method: "POST", html: { class: 'form form-active' }  do |f| %>
       <div class="form--header-container">
         <h1 class="form--header-title">
           What do you want to recycle ?
@@ -12,11 +12,9 @@
       </div>
       <%= f.input :query %>
       <%= f.association :category %>
-      <%= f.button :submit %>
+      <%= f.button :submit , class: "form__btn"%>
 <!--       <input type="text" placeholder="Type the product name" />
       <input type="text" placeholder="Type the product category" />
       <input type="text" placeholder="Your location" /> -->
-      <button class="form__btn" id="btn-1">Search</button>
     <% end %>
   </main>
-  
