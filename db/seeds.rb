@@ -56,7 +56,6 @@ csv.each do |row|
   t = Solution.new
   t.object_name = row["object_name"]
   t.content = row["content"]
-  puts row["category_id"]
   t.category = Category.find(row["category_id"].to_i)
   t.save!
 end
