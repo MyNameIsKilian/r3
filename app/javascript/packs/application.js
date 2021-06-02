@@ -29,7 +29,7 @@ import {Cloudinary} from "cloudinary-core";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { itemFalling, movingItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
+import { timeFalling, itemFalling, movingItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
 
 
 
@@ -47,6 +47,8 @@ document.addEventListener('turbolinks:load', () => {
     itemMovingLeft();
     movingItem();
     itemFalling();
-    setInterval(itemFalling, 500);
+    timeFalling();
+    setInterval(timeFalling, 1000);
+    const myTimer = setInterval(itemFalling, 500);
   }
 });

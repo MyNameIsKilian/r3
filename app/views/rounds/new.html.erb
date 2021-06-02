@@ -2,9 +2,11 @@
   <div class="score-container">
     <h2>Score :</h2>
     <h2 id="score">0</h2>
+    <p>Temps: </p>
+    <h3 id="timer">30</h3>
   </div>
   <% if params["game_id"] == "1" %>
-    <%= render 'partial_games/tetris' %>
+    <%= render @game.partial_name %>
   <% else %>
     <div class="round-content mt-5">
       <br>
