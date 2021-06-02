@@ -1,10 +1,13 @@
 .tetris-grid {
 /*   margin: auto; */
-  background-color: white;
-  border-top: solid 1px $my-dark-green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(250, 250, 250, 0.6),rgba(250, 250, 250, 0.6)),url("https://cdn.xxl.thumbs.canstockphoto.fr/mur-texture-brique-illustration_csp23080324.jpg");
+  /* border-top: solid 1px $my-dark-green; */
   tr {
-    border-left: solid 1px $my-dark-green;
-    border-right: solid 1px $my-dark-green;
+ /*    border-left: solid 1px $my-dark-green;
+    border-right: solid 1px $my-dark-green; */
   }
 
   td {
