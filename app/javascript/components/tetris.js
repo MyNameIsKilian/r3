@@ -1,7 +1,4 @@
-const images = ['aspargus.png', 'book.png', 'beans.png', 'box.png', 'cheese.png', 'chicken.png', 'fish.png', 'glass-bottle-1.png', 'glass-bottle-2.png', 'glass-bottle-3.png', 'meat.png', 'news-paper.png', 'orange.png', 'plastic-bottle-1.png', 'plastic-bottle-2.png', 'spinach.png'];
-const aliments = ['aspargus.png', 'beans.png', 'cheese.png', 'chicken.png', 'fish.png', 'meat.png', 'orange.png', 'spinach.png'];
-const glass = ['glass-bottle-1.png', 'glass-bottle-2.png', 'glass-bottle-3.png'];
-const paper = ['book.png', 'box.png', 'news-paper.png', 'plastic-bottle-1.png', 'plastic-bottle-2.png'];
+const images = ['v1622560515/spinach.png', 'v1622560509/plastic-bottle-2.png', 'v1622560504/plastic-bottle-1.png', 'v1622560494/orange.png', 'v1622560490/news-paper.png', 'v1622560486/meat.png', 'v1622560482/glass-bottle-3.png', 'v1622560478/glass-bottle-2.png', 'v1622560473/glass-botle-1.png', 'v1622560463/fish.png', 'v1622560457/chicken.png', 'v1622560453/cheese.png', 'v1622560447/book.png', 'v1622560441/beans.png', 'v1622560428/aspargus.png'];
 const regex1 = new RegExp('box');
 const regex2 = new RegExp('book');
 const regex3 = new RegExp('paper');
@@ -15,15 +12,10 @@ const regex10 = new RegExp('meat');
 const regex11 = new RegExp('orange');
 const regex12 = new RegExp('spinach');
 const regex13 = new RegExp('fish');
-/*const changeBackground = (element, url) => {
-  return element.style.backgroundImage = `url(${url})`;
-}
-*/
 
 const changeActive = (item, nTile, newImage='') => {
   let image = ""
   if (newImage === '') {
-
     image = window.getComputedStyle(item).backgroundImage;
     item.classList.remove('active');
     item.style.backgroundImage = "";
@@ -36,7 +28,7 @@ const changeActive = (item, nTile, newImage='') => {
     item.style.backgroundImage = "";
 
     nTile.classList.add('active');
-    nTile.style.backgroundImage = `url(/assets/${image})`;
+    nTile.style.backgroundImage = `url("https://res.cloudinary.com/dke9sx7vr/image/upload/${image}")`;
   };
 };
 
@@ -71,19 +63,19 @@ const itemFalling = () => {
         if (regex1.test(d) || regex2.test(d) || regex3.test(d) || regex4.test(d)) {
           score.innerText = `${parseInt(score.innerText) + 20}`;
         } else {
-          score.innerText = `${parseInt(score.innerText) - 10}`;
+          score.innerText = `${parseInt(score.innerText) - 5}`;
         }
       } else if (activeIndex >= 4 && activeIndex <= 7) {
         if (regexGlass.test(d)) {
-          score.innerText = `${parseInt(score.innerText) + 25}`;
+          score.innerText = `${parseInt(score.innerText) + 15}`;
         } else {
-          score.innerText = `${parseInt(score.innerText) - 20}`;
+          score.innerText = `${parseInt(score.innerText) - 0}`;
         }
       } else if (activeIndex >= 8 && activeIndex <= 11) {
         if (regex6.test(d) || regex7.test(d) || regex8.test(d) || regex9.test(d) || regex10.test(d) || regex11.test(d) || regex12.test(d) || regex13.test(d)) {
           score.innerText = `${parseInt(score.innerText) + 15}`;
         } else {
-          score.innerText = `${parseInt(score.innerText) - 10}`;
+          score.innerText = `${parseInt(score.innerText) - 5}`;
         }
       };
       const newImage = images[Math.floor(Math.random() * images.length)];
@@ -107,22 +99,4 @@ const movingItem = () => {
 };
 
 
-
-
-
 export { movingItem, itemFalling, itemMovingLeft, itemMovingRight };
-
-
-
-
-/*const newItem = () => {
-  const lastTr = document.getElementById('last-tr');
-  lastTr.addEventListener("", (event) => {*/
-    // si un td contient la classe active, lui enlever
-    // ajouter la classe active à start
-/*  });
-};*/
-
-
-  /*const start = document.getElementById('start');
-  start.classList.add('active');*/
