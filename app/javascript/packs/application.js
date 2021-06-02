@@ -25,7 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 
-import {Cloudinary} from “cloudinary-core”;
+import {Cloudinary} from 'cloudinary-core';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -37,6 +37,10 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
+/*  if (window.location.pathname === '/') {
+    document.location.reload();
+  }
+*/
   const tetris = document.querySelector(".tetris-grid");
   if (tetris) {
     itemMovingRight();
