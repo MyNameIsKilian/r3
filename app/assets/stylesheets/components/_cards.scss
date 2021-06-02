@@ -9,37 +9,26 @@
 
 .card-solution {
   overflow: hidden;
-  height: 250px;
+  height: 170px;
   margin: 105px 0;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 25px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }
 
 .card-solution img {
-  height: 30%;
-  width: 165px;
+  height: 100%;
+  width: 150px;
   object-fit: cover;
-}
+  position: top;
 
-.card-solution h2 {
-  font-size: 16px;
-  text-align: left;
-  font-weight: bold;
-  margin: 0px;
-}
-
-.card-solution p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 64px;
-  margin-top: 8px;
 }
 
 .card-solution .card-solution-description {
   padding: 16px;
 
 }
+
+

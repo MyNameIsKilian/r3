@@ -3,16 +3,28 @@
   <div class="container">
     <div class="researches-show">
       <div class="Solutions-show-pic mb-3">
-        <h2 class="mt-3"><%= @research.solution.object_name %></h2>
+        <h2 class="mt-2"><%= @research.solution.object_name %></h2>
         <%= @research.solution.first_content %>
-
       </div>
     </div>
+
     <div class="card-solution m-1">
-      <img src="https://www.easyrecyclage.com/wp-content/uploads/2019/04/Easyrecyclage_Bureau_Fun_2.jpg?x70212" />
+      <% if params["category_id"] == "1" %>
+        <%= cl_image_tag ("trash-plastic.png"), height: 100% , width: 150, crop: :fill %>
+      <% elsif params["category_id"] == "2"%>
+        <%= cl_image_tag ("trash-paper.png"), height: 100% , width: 150, crop: :fill %>
+      <% elsif params["category_id"] == "3"%>
+        <%= cl_image_tag ("trash-glass.png"), height: 100% , width: 150, crop: :fill %>
+      <% elsif params["category_id"] == "4"%>
+        <%= cl_image_tag ("trash-paper.png"), height: 100% , width: 150, crop: :fill %>
+      <% elsif params["category_id"] == "5"%>
+        <%= cl_image_tag ("trash-metal.png"), height: 100% , width: 150, crop: :fill %>
+      <%= else cl_image_tag ("trash-black.png"), height: 100% , width: 150, crop: :fill %>
+      <% end %>
+
       <div class="card-solution-description">
-        <h2>Solution</h2>
-        <p>Bien jeter : <%= @research.solution.bien_jeter %></p>
+        <h3>Solution</h3>
+        <p><strong> Bien jeter : </strong> <%= @research.solution.bien_jeter %></p>
       </div>
     </div>
   </div>
