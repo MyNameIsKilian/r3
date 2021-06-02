@@ -47,8 +47,9 @@ document.addEventListener('turbolinks:load', () => {
     itemMovingLeft();
     movingItem();
     itemFalling();
+    console.log(document.querySelector('#score'));
     timeFalling();
     setInterval(timeFalling, 1000);
-    const myTimer = setInterval(itemFalling, 500);
+    /*onst myTimer = setInterval(itemFalling, 500);*/
   }
 });

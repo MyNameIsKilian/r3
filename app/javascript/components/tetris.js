@@ -81,13 +81,15 @@ const itemFalling = () => {
       const newImage = images[Math.floor(Math.random() * images.length)];
       changeActive(item, start, newImage);
   };
-  console.log(document.querySelector("#timer").innerText);
-/*  if (score.innerText >= 30) {
-    clearInterval(myTimer);*/
-
+  let time = document.querySelector("#timer");
+  if (Number(time.innerText) == 0) {
+    clearInterval(myTimer);
+    // retrouver le formulaire
+    // remplir le formulaire avec les infos du round
+  }
 };
 
-/*const myTimer = setInterval(itemFalling, 500);*/
+const myTimer = setInterval(itemFalling, 500);
 
 const movingItem = () => {
   const leftPart = document.querySelectorAll(".left-part");
