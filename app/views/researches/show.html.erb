@@ -1,6 +1,6 @@
 
 <div class="banner-researches" style="background-image: url(https://image.freepik.com/vecteurs-libre/personnes-recyclant-differents-produits_23-2148513118.jpg)"></div>
-  <div class="container">
+  <div class= "research-content m-3">
     <div class="researches-show">
       <div class="Solutions-show-pic mb-3">
         <h2 class="mt-2"><%= @research.solution.object_name %></h2>
@@ -8,20 +8,29 @@
       </div>
     </div>
 
-    <div class="card-solution m-2">
-
-      <% if @research.solution.category.id == 1 %>
+    <div class="card-solution mt-2 mb-2">
+      <% if @research.solution.category.id == 1 && @research.solution.bien_jeter.include?("verte") %>
         <%= cl_image_tag("trash-plastic.png") %>
-      <% elsif params["category_id"] == 2 %>
-        <%= cl_image_tag("trash-paper.png", height: 100, width: 150, crop: :fill) %>
-      <% elsif params["category_id"] == 3 %>
-        <%= cl_image_tag("trash-glass.png", height: 100, width: 150, crop: :fill) %>
-      <% elsif params["category_id"] == 4 %>
-        <%= cl_image_tag("trash-paper.png", height: 100, width: 150, crop: :fill) %>
-      <% elsif params["category_id"] == 5 %>
-        <%= cl_image_tag("trash-metal.png", height: 100, width: 150, crop: :fill) %>
+      <% elsif @research.solution.category.id == 1 && @research.solution.bien_jeter.include?("noire") %>
+        <%= cl_image_tag("trash-black.png") %>
+      <% elsif @research.solution.category.id == 2 && @research.solution.bien_jeter.include?("verte") %>
+        <%= cl_image_tag("trash-paper.png") %>
+      <% elsif @research.solution.category.id == 2 && @research.solution.bien_jeter.include?("noire") %>
+        <%= cl_image_tag("trash-black.png") %>
+      <% elsif @research.solution.category.id == 3 && @research.solution.bien_jeter.include?("volontaire") %>
+        <%= cl_image_tag("trash-glass.png") %>
+      <% elsif @research.solution.category.id == 3 && @research.solution.bien_jeter.include?("noire") %>
+        <%= cl_image_tag("trash-noire.png") %>
+      <% elsif @research.solution.category.id == 4 && @research.solution.bien_jeter.include?("verte") %>
+        <%= cl_image_tag("trash-paper.png") %>
+      <% elsif @research.solution.category.id == 4 && @research.solution.bien_jeter.include?("noire") %>
+        <%= cl_image_tag("trash-black.png") %>
+      <% elsif @research.solution.category.id== 5 && @research.solution.bien_jeter.include?("verte") %>
+        <%= cl_image_tag("trash-metal.png") %>
+      <% elsif @research.solution.category.id == 5 && @research.solution.bien_jeter.include?("noire") %>
+        <%= cl_image_tag("trash-black.png") %>
       <% else %>
-        <%= cl_image_tag("trash-black.png", height: 100, width: 150, crop: :fill) %>
+        <%= cl_image_tag("trash-black.png") %>
       <% end %>
 
       <div class="card-solution-description">
@@ -31,3 +40,10 @@
       </div>
     </div>
   </div>
+<!--
+plastic = 1
+box = 2
+glass = 3
+packaging_and_paper = 4
+aluminium = 5
+ -->

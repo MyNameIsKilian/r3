@@ -44,11 +44,6 @@ category4.save!
 category5 = Category.new(name: 'aluminium')
 category5.save!
 
-solution1 = Solution.new(object_name: "carton", category: category1, content: "solution")
-solution1.save!
-research = Research.new(user: kiki, category: category1, solution: solution1, query: "carton")
-research.save!
-
 solutions = File.read(Rails.root.join("lib", "seeds", "R3-recyclage.csv"))
 csv_options = { headers: :first_row }
 csv = CSV.parse(solutions, csv_options)
