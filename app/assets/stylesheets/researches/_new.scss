@@ -1,11 +1,19 @@
-main {
-  height: 100vh;
-  width: 100%;
+.banner-researches-new {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  position: relative;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.researches-new {
+  min-height: calc(100vh - 250px - 66px);
 }
 
 .form {
@@ -19,19 +27,21 @@ main {
   overflow: hidden;
 }
 .form--header-container {
-  background: linear-gradient(to right, rgb(51, 51, 51), #359460);
+  background: linear-gradient(to right, rgb(129, 226, 134), #62D2A2);
+  border-radius: 12px;
   color: #fff;
-  height: 6rem;
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
 
 .form--header-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .form--header-text {
   padding: 0.5rem 0;
+  text-align: center;
 }
 
 input[type="text"] {
@@ -72,4 +82,8 @@ input[type="text"] {
 .form-active {
   z-index: 1000;
   display: block;
+}
+
+.form-control {
+  border-radius: 0.5rem;
 }

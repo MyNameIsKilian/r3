@@ -12,8 +12,13 @@ class ResearchesController < ApplicationController
       if @research.save
         redirect_to research_path(@research)
       else
+        flash[:alert] = "0 solutions trouvées, essayez un autre mot"
         render :new
       end
+    else
+      flash[:alert] = "Entrez un nom d'objet dans la recherche"
+      @research = Research.new
+      render :new
     end
   end
 

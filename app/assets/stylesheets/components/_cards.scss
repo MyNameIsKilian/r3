@@ -1,11 +1,11 @@
-//CARDS SOLUTION RECYCLE
-// .recycle-solution-card {
-//   text-align: center;
-//   background: rgba(94, 236, 189, 0.972);
-//   height: 300px;
-//   margin: 42px 0;
-//   border-radius: 25px;
-// }
+.card-researches {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 !important;
+}
 
 .card-solution {
   overflow: hidden;

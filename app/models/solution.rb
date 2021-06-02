@@ -14,6 +14,7 @@ class Solution < ApplicationRecord
     }
   
   belongs_to :category
+  has_many :researches, dependent: :destroy
   validates :object_name, presence: true
 
   def bien_jeter
