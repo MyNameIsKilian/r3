@@ -19,7 +19,7 @@ soso = User.new(first_name: "Soso", last_name: "Forever", email: "soso@gmail.com
 soso.save!
 
 puts 'Creating games!'
-game1 = Game.new(name: 'Tetris', description: 'Déplace les déchets dans les bonnes poubelles ! Poubelle jaune: plastique et papier, poubelle bleue: verre, poubelle verte: déchets verts.')
+game1 = Game.new(partial_name: 'partial_games/tetris', name: 'Tetris', description: 'Déplace les déchets dans les bonnes poubelles ! Poubelle jaune: plastique et papier, poubelle bleue: verre, poubelle verte: déchets verts.')
 game1.save!
 
 game2 = Game.new(name: 'Angry Trash', description: 'Vise et jette les déchets dans la poubelle pour marquer un maximum de points !')
