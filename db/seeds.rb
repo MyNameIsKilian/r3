@@ -19,35 +19,30 @@ soso = User.new(first_name: "Soso", last_name: "Forever", email: "soso@gmail.com
 soso.save!
 
 puts 'Creating games!'
-game1 = Game.new(name: 'Tetris', description: 'Tetris challenges you to make complete lines by moving pieces of different shapes, the tetrominoes, which scroll from the top to the bottom of the screen.')
+game1 = Game.new(name: 'Tetris', description: 'Déplace les déchets dans les bonnes poubelles ! Poubelle jaune: plastique et papier, poubelle bleue: verre, poubelle verte: déchets verts.')
 game1.save!
 
-game2 = Game.new(name: 'Follow the right road', description: 'In turn, this game allows you to deposit one of the waste in the appropriate garbage can.')
+game2 = Game.new(name: 'Angry Trash', description: 'Vise et jette les déchets dans la poubelle pour marquer un maximum de points !')
 game2.save!
 
-game3 = Game.new(name: 'Foolish sorting', description: 'à voir')
+game3 = Game.new(name: 'World of Wartrash', description: 'Commence une aventure hors du commun dans un monde de déchets. Améliore ta poubelle et défis les autres joueurs.')
 game3.save!
 
 puts 'Creating categories!'
-category1 = Category.new(name: 'plastic')
+category1 = Category.new(name: 'plastique')
 category1.save!
 
-category2 = Category.new(name: 'box')
+category2 = Category.new(name: 'carton')
 category2.save!
 
-category3 = Category.new(name: 'glass')
+category3 = Category.new(name: 'verre')
 category3.save!
 
-category4 = Category.new(name: 'packaging and paper')
+category4 = Category.new(name: 'emballage et papier')
 category4.save!
 
 category5 = Category.new(name: 'aluminium')
 category5.save!
-
-solution1 = Solution.new(object_name: "carton", category: category1, content: "solution")
-solution1.save!
-research = Research.new(user: kiki, category: category1, solution: solution1, query: "carton")
-research.save!
 
 solutions = File.read(Rails.root.join("lib", "seeds", "R3-recyclage.csv"))
 csv_options = { headers: :first_row }
