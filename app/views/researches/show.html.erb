@@ -8,23 +8,26 @@
       </div>
     </div>
 
-    <div class="card-solution m-1">
-      <% if params["category_id"] == "1" %>
-        <%= cl_image_tag ("trash-plastic.png"), height: 100% , width: 150, crop: :fill %>
-      <% elsif params["category_id"] == "2"%>
-        <%= cl_image_tag ("trash-paper.png"), height: 100% , width: 150, crop: :fill %>
-      <% elsif params["category_id"] == "3"%>
-        <%= cl_image_tag ("trash-glass.png"), height: 100% , width: 150, crop: :fill %>
-      <% elsif params["category_id"] == "4"%>
-        <%= cl_image_tag ("trash-paper.png"), height: 100% , width: 150, crop: :fill %>
-      <% elsif params["category_id"] == "5"%>
-        <%= cl_image_tag ("trash-metal.png"), height: 100% , width: 150, crop: :fill %>
-      <%= else cl_image_tag ("trash-black.png"), height: 100% , width: 150, crop: :fill %>
+    <div class="card-solution m-2">
+
+      <% if @research.solution.category.id == 1 %>
+        <%= cl_image_tag("trash-plastic.png") %>
+      <% elsif params["category_id"] == 2 %>
+        <%= cl_image_tag("trash-paper.png", height: 100, width: 150, crop: :fill) %>
+      <% elsif params["category_id"] == 3 %>
+        <%= cl_image_tag("trash-glass.png", height: 100, width: 150, crop: :fill) %>
+      <% elsif params["category_id"] == 4 %>
+        <%= cl_image_tag("trash-paper.png", height: 100, width: 150, crop: :fill) %>
+      <% elsif params["category_id"] == 5 %>
+        <%= cl_image_tag("trash-metal.png", height: 100, width: 150, crop: :fill) %>
+      <% else %>
+        <%= cl_image_tag("trash-black.png", height: 100, width: 150, crop: :fill) %>
       <% end %>
 
       <div class="card-solution-description">
         <h3>Solution</h3>
         <p><strong> Bien jeter : </strong> <%= @research.solution.bien_jeter %></p>
+        <%= link_to "Retour", new_research_path, class: "btn btn-success" %>
       </div>
     </div>
   </div>
