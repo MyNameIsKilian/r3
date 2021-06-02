@@ -81,7 +81,13 @@ const itemFalling = () => {
       const newImage = images[Math.floor(Math.random() * images.length)];
       changeActive(item, start, newImage);
   };
+  console.log(document.querySelector("#timer").innerText);
+/*  if (score.innerText >= 30) {
+    clearInterval(myTimer);*/
+
 };
+
+/*const myTimer = setInterval(itemFalling, 500);*/
 
 const movingItem = () => {
   const leftPart = document.querySelectorAll(".left-part");
@@ -98,5 +104,10 @@ const movingItem = () => {
   })
 };
 
+const timeFalling = () => {
+  let time = document.querySelector("#timer");
+  time.innerText = `${parseInt(time.innerText) - 1}`;
+}
 
-export { movingItem, itemFalling, itemMovingLeft, itemMovingRight };
+
+export { timeFalling, movingItem, itemFalling, itemMovingLeft, itemMovingRight };
