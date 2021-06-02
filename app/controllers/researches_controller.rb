@@ -12,6 +12,7 @@ class ResearchesController < ApplicationController
       if @research.save
         redirect_to research_path(@research)
       else
+        flash[:alert] = "0 solutions found: try another keyword"
         render :new
       end
     end

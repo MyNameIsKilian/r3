@@ -1,8 +1,7 @@
 .banner-researches-new {
   background-size: cover;
-  margin: 0;
-  background-position: top;
-  height: 270px;
+  background-position: center;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,14 +12,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-researches {
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
+.researches-new {
+  min-height: calc(100vh - 250px - 66px);
 }
 
 .form {
@@ -34,19 +27,21 @@
   overflow: hidden;
 }
 .form--header-container {
-  background: linear-gradient(to right, rgb(51, 51, 51), #359460);
+  background: linear-gradient(to right, rgb(129, 226, 134), #62D2A2);
+  border-radius: 12px;
   color: #fff;
-  height: 6rem;
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
 
 .form--header-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .form--header-text {
   padding: 0.5rem 0;
+  text-align: center;
 }
 
 input[type="text"] {
