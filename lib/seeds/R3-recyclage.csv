@@ -1,6 +1,6 @@
 id,object_name,content,category_id
 1,Barquette en plastique,Les barquettes en plastique ne sont pas recyclées parce qu'elles sont trop légères et ne contiennent pas suffisamment de matière. Bien jeter : Poubelle noire. ,1
-2,Bouteille en plastique,"Les bouteilles en plastique transparent contenant des boissons (eau, sodas, jus de fruits) sont recyclables.Les barquettes en plastique ne sont pas recyclées parce qu'elles sont trop légères et ne contiennent pas suffisamment de matière.
+2,Bouteille en plastique,"Les bouteilles en plastique transparent contenant des boissons (eau, sodas, jus de fruits) sont recyclables.
 Bien jeter : Poubelle verte.  ",1
 3,Brique alimentaire,"La brique alimentaire est recyclable.
 Bien jeter : Poubelle verte. ",1
@@ -29,15 +29,15 @@ Bien jeter : Poubelle verte. ",2
 15,Emballage en papier,"Les emballages en papier (les sacs de charbon de bois, les sacs en papier kraft d'achats alimentaires…) sont composés de fibres de cellulose. Ils sont, pour la plupart, recyclables.
 Bien jeter : Poubelle verte. ",2
 16,Gros carton d'emballage,"Le carton est composé de fibres de cellulose. Il est recyclable. Le gros carton d'emballage (d'électroménager par exemple), doit être déposé dans un centre de recyclage (déchetterie).
-Bien jeter : poubelle verte et dechetterie. ",2
+Bien jeter : Poubelle verte. ",2
 17,Paquet de lessive,"Le paquet de lessive vide, que ce soit un emballage en plastique, en carton et en aluminium, qu'il soit carré ou rond, est recyclable.
 Bien jeter : Poubelle verte. ",1
 18,Bocal en verre,"Le verre est un matériau recyclable à 100 %, sans perte de qualité ni de quantité.
 Bien jeter : Borne d'apport volontaire.",3
 19,"Bouteille, flacon en verre","Le verre est un matériau recyclable à 100 %, sans perte de qualité ni de quantité.
-Bien jeter : Borne d'apport volontaire",3
+Bien jeter : Borne d'apport volontaire.",3
 20,"Bouteille, flacon, bidon en métal","Les bouteilles, flacons et bidons en métal sont en acier ou en aluminium. Ce sont des emballages recyclables.
-Bien jeter : Poubelle verte",5
+Bien jeter : Poubelle verte.",5
 21,Emballage en papier recyclable,"Les emballages en papier (les sacs de charbon de bois, les sacs en papier kraft d'achats alimentaires…) sont composés de fibres de cellulose. Ils sont, pour la plupart, recyclables.
 Bien jeter : Poubelle verte. ",4
 22,Polystyrène,"Le polystyrène n'est pas recyclable.

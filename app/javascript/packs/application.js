@@ -25,7 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 
-import {Cloudinary} from 'cloudinary-core';
+import {Cloudinary} from "cloudinary-core";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
