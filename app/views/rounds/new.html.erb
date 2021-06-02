@@ -1,5 +1,8 @@
 <div class="games-container">
-  <h2>Score : 0</h2>
+  <div class="score-container">
+    <h2>Score :</h2>
+    <h2 id="score">0</h2>
+  </div>
   <% if params["game_id"] == "1" %>
     <%= render 'partial_games/tetris' %>
   <% else %>

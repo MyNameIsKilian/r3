@@ -5,7 +5,14 @@ class Solution < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
+  pg_search_scope :search_by_category_name,
+    associated_against: {
+      category: [:name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+  
   belongs_to :category
   validates :object_name, presence: true
 
