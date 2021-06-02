@@ -4,7 +4,7 @@
     <div class="card-researches">
       <%= simple_form_for @research do |f| %>
         <div class="form--header-container mt-4">
-          <h2 class="form--header-title">Qu'est-ce que vous voulez recycler ?</h2>
+          <h2 class="form--header-title">QUE VOULEZ-VOUS RECYCLER ?</h2>
         </div>
         <%= f.input :query, collection: Solution.pluck(:object_name).sort, label: "Objet", as: :select %>
         <%= f.association :category, label: "Catégorie", selected: Category.first %>
