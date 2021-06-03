@@ -45,7 +45,7 @@ document.addEventListener('turbolinks:load', () => {
 
     const createInterval = setInterval(() => {
       let time = document.querySelector("#timer");
-      if (Number(time.innerText) === 25) {
+      if (Number(time.innerText) === 0) {
         clearInterval(itemInterval);
         clearInterval(timeInterval);
         const scoreInput = document.getElementById("round_score");
