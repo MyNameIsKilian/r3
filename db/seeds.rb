@@ -44,6 +44,12 @@ category4.save!
 category5 = Category.new(name: 'aluminium')
 category5.save!
 
+category6 = Category.new(name: 'bambou')
+category6.save!
+
+category7 = Category.new(name: 'textile')
+category7.save!
+
 solutions = File.read(Rails.root.join("lib", "seeds", "R3-recyclage.csv"))
 csv_options = { headers: :first_row }
 csv = CSV.parse(solutions, csv_options)
