@@ -7,7 +7,7 @@ Bien jeter : Poubelle verte. ",1
 4,Canette de boisson,"Les canettes de boissons sont en aluminium. Elles sont recyclables.
 Bien jeter : Poubelle verte. ",5
 5,Film plastique,"Les films en plastique sont généralement trop souillés, notamment par des produits alimentaires. Ils ne sont donc pas recyclés.
-Bien jeter : Poubelle verte.",1
+Bien jeter : Poubelle noire.",1
 6,"Flacon alimentaire en plastique, cubitainer","Les flacons en plastique ainsi que les cubitainers en plastique sont des emballages recyclables.
 Bien jeter : Poubelle verte. ",1
 7,Flacon plastique de produit de toilette,"Les flacons en plastique sont des emballages recyclables.
@@ -50,3 +50,7 @@ Bien jeter : Poubelle verte.",5
 Bien jeter : Poubelle verte. ",2
 26,Paquet de lessive,"Le paquet de lessive vide, que ce soit un emballage en plastique, en carton et en aluminium, qu'il soit carré ou rond, est recyclable.
 Bien jeter : Poubelle verte. ",5
+27,Brosse à dent,"Les brosses à dents contiennent des plastiques complexes, elles ne sont pas recyclables bien que des solutions se développent depuis peu.
+Bien jeter : Poubelle noire. ",1
+28,Brosse à dent en bambou,"Les brosses à dents en bambou sont 100% biodégradables ! Cassez la tête ou enlevez les poils de la brosse: cela vous permettra de retirer une petite agrafe métallique qui permet de retenir les poils dans leur trou. Placez le manche en bambou dans votre bac de compostage, les poils et agrafes métalliques dans la poubelle de recyclage.
+Bien jeter : Bac de compostage.",6
