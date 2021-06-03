@@ -28,12 +28,15 @@ import "bootstrap";
 import {Cloudinary} from "cloudinary-core";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initSelect2 } from '../components/init_select2';
 import { timeFalling, itemFalling, movingItem, itemMovingLeft, itemMovingRight } from '../components/tetris.js'
 
 
 
 document.addEventListener('turbolinks:load', () => {
+
+  initSelect2();
+  
   const tetris = document.querySelector(".tetris-grid");
   if (tetris) {
     itemMovingRight();
