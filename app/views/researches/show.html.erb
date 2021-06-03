@@ -28,6 +28,8 @@
         <%= cl_image_tag("trash-metal.png") %>
       <% elsif @research.solution.category.id == 5 && @research.solution.bien_jeter.include?("noire") %>
         <%= cl_image_tag("trash-black.png") %>
+      <% elsif @research.solution.category.id == 6 %>
+        <%= cl_image_tag("trash-organic.png") %>
       <% else %>
         <%= cl_image_tag("trash-black.png") %>
       <% end %>
