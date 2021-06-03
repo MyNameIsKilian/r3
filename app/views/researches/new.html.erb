@@ -8,7 +8,7 @@
         </div>
         <%= f.input :query, collection: Solution.pluck(:object_name).sort, label: "Objet", as: :select %>
         <%= f.association :category, label: "Catégorie", selected: Category.first %>
-        <%= f.button :submit, "Recherche", remote: true, class: "form__btn w-100"%>
+        <%= f.button :submit, "Rechercher", remote: true, class: "form__btn w-100"%>
         <% end %>
     </div>
   </div>
