@@ -6,7 +6,8 @@
         <div class="form--header-container mt-4">
           <h2 class="form--header-title">QUE VOULEZ-VOUS RECYCLER ?</h2>
         </div>
-        <%= f.input :query, collection: Solution.pluck(:object_name).sort, label: "Objet", as: :select %>
+
+        <%= f.input :query, collection: Solution.pluck(:object_name).sort.uniq, input_html: { class: 'js-example-basic-single' }, label: "Objet", as: :select %>
         <%= f.association :category, label: "Catégorie", selected: Category.first %>
         <%= f.button :submit, "Recherche", remote: true, class: "form__btn w-100"%>
         <% end %>
