@@ -48,6 +48,15 @@ const itemMovingLeft = () => {
   }
 };
 
+const itemMovingDown = () => {
+  const item = document.querySelector('.active');
+  const activeIndex = item.cellIndex;
+  const downTile = item.parentElement.nextElementSibling.children;
+  if (downTile.length == 12) {
+    changeActive(item, downTile[`${activeIndex}`]);
+  }
+};
+
 const movingItem = () => {
   const leftPart = document.querySelectorAll(".left-part");
   leftPart.forEach((leftpart) => {
@@ -60,6 +69,18 @@ const movingItem = () => {
     rightpart.addEventListener("click", (event) => {
       itemMovingRight();
     });
+  })
+  const yellowTrash = document.querySelector(".yellow-trash");
+  yellowTrash.addEventListener("click", (event) => {
+    itemMovingDown();
+  })
+  const greenTrash = document.querySelector(".green-trash");
+  greenTrash.addEventListener("click", (event) => {
+    itemMovingDown();
+  })
+  const blueTrash = document.querySelector(".blue-trash");
+  blueTrash.addEventListener("click", (event) => {
+    itemMovingDown();
   })
 };
 
