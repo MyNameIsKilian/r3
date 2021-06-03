@@ -12,7 +12,7 @@ puts 'Creating user!'
 valentina = User.new(first_name: "Valentina", last_name: "forever", email: "valentina@gmail.com", password: "secret", phone_number: "0600000000")
 valentina.save!
 
-kiki = User.new(first_name: "Kiki", last_name: "forever", email: "kiki@gmail.com", password: "secret", phone_number: "0600000001")
+kiki = User.new(first_name: "Kilian", last_name: "forever", email: "kiki@gmail.com", password: "secret", phone_number: "0600000001")
 kiki.save!
 
 soso = User.new(first_name: "Soso", last_name: "Forever", email: "soso@gmail.com", password: "secret", phone_number: "0600000002")
@@ -38,7 +38,7 @@ category2.save!
 category3 = Category.new(name: 'verre')
 category3.save!
 
-category4 = Category.new(name: 'emballage et papier')
+category4 = Category.new(name: 'papier')
 category4.save!
 
 category5 = Category.new(name: 'aluminium')

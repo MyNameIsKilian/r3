@@ -1,0 +1,22 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary invisible" id="round-modal" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade rounded" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h2 class="modal-title text-justify" id="exampleModalLongTitle">Bien joué <%= current_user.first_name %> !</h2>
+      </div>
+      <div class="modal-body">
+        <h4 id="modal-score"></h4>
+      </div>
+      <div class="modal-footer d-flex justify-content-around">
+        <%= link_to "Relancer une partie", new_game_round_path(@game), class: "btn btn-success rounded mb-3" %>
+        <%= link_to "Retour au choix de jeux", games_path, class: "btn btn-info rounded" %>
+      </div>
+    </div>
+  </div>
+</div>

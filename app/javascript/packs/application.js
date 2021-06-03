@@ -43,7 +43,7 @@ document.addEventListener('turbolinks:load', () => {
     const itemInterval = setInterval(itemFalling, 500);
     const timeInterval = setInterval(timeFalling, 1000);
 
-    setInterval(() => {
+    const createInterval = setInterval(() => {
       let time = document.querySelector("#timer");
       if (Number(time.innerText) === 0) {
         clearInterval(itemInterval);
@@ -52,8 +52,10 @@ document.addEventListener('turbolinks:load', () => {
         const myScore = document.querySelector('#score').innerText;
         scoreInput.value = myScore;
         document.getElementById("new_round").submit();
-                // retrouver le formulaire
-        // remplir le formulaire avec les infos du round
+        const finalScore = document.getElementById("modal-score");
+        finalScore.innerText = `Score:  ${myScore}`;
+        document.getElementById("round-modal").click();
+        clearInterval(createInterval);
       }
     }, 500)
   }
