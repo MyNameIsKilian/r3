@@ -1,4 +1,4 @@
-<div class="games-container">
+<div class="games-container-show">
   <h1><%= @game.name %></h1>
     <div class="card-trip">
       <img src="https://image.freepik.com/vecteurs-libre/famille-enfants-regardant-tri-ordures_74855-14017.jpg" />
@@ -8,5 +8,6 @@
         </div>
       </div>
     </div>
-  <%= link_to "Play !", new_game_round_path(@game), class: "play-button" %>
+  <%= link_to "Jouer !", new_game_round_path(@game), class: "play-button" %>
+  <%= link_to "Retour", games_path, class: "btn btn-info mt-2" %>
 </div>

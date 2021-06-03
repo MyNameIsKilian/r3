@@ -20,21 +20,24 @@ h1{
   font-weight: bold;
 }
 
-.btn-success{
-  border-radius: 6px;
 
-}
 
-.banner .btn {
-  color: white;
-}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #f5f6f7;
-  font-family: "Nunito", sans-serif;
+
+.home-button{
+ background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 4px #555;
+  a {
+    color: $my-dark-green;
+  }
 }

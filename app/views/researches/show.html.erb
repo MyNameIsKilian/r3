@@ -1,8 +1,8 @@
-<div class="banner-researches-new w-100" style="background-image: url(https://image.freepik.com/vecteurs-libre/personnes-recyclant-differents-produits_23-2148513118.jpg)"></div>
+<div class="banner-researches" style="background-image: url(https://image.freepik.com/vecteurs-libre/personnes-recyclant-differents-produits_23-2148513118.jpg)"></div>
   <div class= "research-content m-3">
     <div class="researches-show">
       <div class="Solutions-show-pic mb-3">
-        <h2 class="mt-2"><%= @research.solution.object_name %></h2>
+        <h3 class="mt-2"><%= @research.solution.object_name %></h3>
         <%= @research.solution.first_content %>
       </div>
     </div>
@@ -33,9 +33,9 @@
       <% end %>
 
       <div class="card-solution-description">
-        <h3>Solution</h3>
-        <p><strong> Bien jeter : </strong> <%= @research.solution.bien_jeter %></p>
-        <%= link_to "Retour", new_research_path, class: "btn btn-success" %>
+        <h4>Solution</h4>
+        <h6><strong> Bien jeter : </strong> <%= @research.solution.bien_jeter %></h6>
+        <%= link_to "Retour", new_research_path, class: "btn btn-info" %>
       </div>
     </div>
   </div>

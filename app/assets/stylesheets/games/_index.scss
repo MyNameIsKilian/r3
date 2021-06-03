@@ -2,23 +2,33 @@
 @import "tetris";
 
 .game-button {
-  background-color: $my-green;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 235px;
-  height: 80px;
+  width: 230px;
+  height: 50px;
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 24px;
   border-radius: 8px;
-  /* padding: 0px 55px; */
   text-align: center;
   a {
-    color: white;
+    color: $my-dark-green;
   }
 }
 
 #games-index {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  color: white;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.games-container-index {
+  background-image: linear-gradient(rgba(46, 144, 102, 0.5),rgba(41, 184, 131, 0.6)), url(https://media2.giphy.com/media/26gsmQ7ABO9RaASFq/giphy.webp?cid=ecf05e470fjuz27mwy17nd2clgv7f4om3x0lhqtm6n6amz4f&rid=giphy.webp&ct=g);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: light-gray;
+  height: 100vh;
 }

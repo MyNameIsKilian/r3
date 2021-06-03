@@ -1,4 +1,4 @@
-<div class="banner-researches-new w-100" style="background-image: url(https://image.freepik.com/vecteurs-libre/personnes-recyclant-differents-produits_23-2148513118.jpg)"></div>
+<div class="banner-researches" style="background-image: url(https://image.freepik.com/vecteurs-libre/personnes-recyclant-differents-produits_23-2148513118.jpg)"></div>
 <div class="researches-new px-4">
   <div class="New research-now-pic">
     <div class="card-researches">
@@ -8,7 +8,7 @@
         </div>
         <%= f.input :query, collection: Solution.pluck(:object_name).sort, label: "Objet", as: :select %>
         <%= f.association :category, label: "Catégorie", selected: Category.first %>
-        <%= f.button :submit, "Recherche", remote: true, class: "form__btn w-100"%>
+        <%= f.button :submit, "Rechercher", remote: true, class: "form__btn w-100"%>
         <% end %>
     </div>
   </div>
