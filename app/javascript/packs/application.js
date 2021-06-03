@@ -34,21 +34,27 @@ import { timeFalling, itemFalling, movingItem, itemMovingLeft, itemMovingRight }
 
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-
-/*  if (window.location.pathname === '/') {
-    document.location.reload();
-  }
-*/
   const tetris = document.querySelector(".tetris-grid");
   if (tetris) {
     itemMovingRight();
     itemMovingLeft();
     movingItem();
-    itemFalling();
-    timeFalling();
-    setInterval(timeFalling, 1000);
-    const myTimer = setInterval(itemFalling, 500);
+
+    const itemInterval = setInterval(itemFalling, 500);
+    const timeInterval = setInterval(timeFalling, 1000);
+
+    setInterval(() => {
+      let time = document.querySelector("#timer");
+      if (Number(time.innerText) === 0) {
+        clearInterval(itemInterval);
+        clearInterval(timeInterval);
+        const scoreInput = document.getElementById("round_score");
+        const myScore = document.querySelector('#score').innerText;
+        scoreInput.value = myScore;
+        document.getElementById("new_round").submit();
+                // retrouver le formulaire
+        // remplir le formulaire avec les infos du round
+      }
+    }, 500)
   }
 });

@@ -32,7 +32,6 @@ const changeActive = (item, nTile, newImage='') => {
   };
 };
 
-
 const itemMovingRight = () => {
   const item = document.querySelector('.active');
   const rightTile = item.nextElementSibling;
@@ -47,6 +46,21 @@ const itemMovingLeft = () => {
   if (leftTile) {
     changeActive(item, leftTile)
   }
+};
+
+const movingItem = () => {
+  const leftPart = document.querySelectorAll(".left-part");
+  leftPart.forEach((leftpart) => {
+    leftpart.addEventListener("click", (event) => {
+      itemMovingLeft();
+    });
+  })
+  const rightPart = document.querySelectorAll(".right-part");
+    rightPart.forEach((rightpart) => {
+    rightpart.addEventListener("click", (event) => {
+      itemMovingRight();
+    });
+  })
 };
 
 const itemFalling = () => {
@@ -81,27 +95,6 @@ const itemFalling = () => {
       const newImage = images[Math.floor(Math.random() * images.length)];
       changeActive(item, start, newImage);
   };
-  console.log(document.querySelector("#timer").innerText);
-/*  if (score.innerText >= 30) {
-    clearInterval(myTimer);*/
-
-};
-
-/*const myTimer = setInterval(itemFalling, 500);*/
-
-const movingItem = () => {
-  const leftPart = document.querySelectorAll(".left-part");
-  leftPart.forEach((leftpart) => {
-    leftpart.addEventListener("click", (event) => {
-      itemMovingLeft();
-    });
-  })
-  const rightPart = document.querySelectorAll(".right-part");
-    rightPart.forEach((rightpart) => {
-    rightpart.addEventListener("click", (event) => {
-      itemMovingRight();
-    });
-  })
 };
 
 const timeFalling = () => {

@@ -133,3 +133,15 @@
   <tr>
   </tr>
 </table>
+
+<%= simple_form_for [ @game, @round] do |f| %>
+  <div class="d-none">
+    <%= f.input :score %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+
+<!-- // inspecter et retrouver l'input
+// rentrer input.value = le score que j'ai recupérer
+ -->
