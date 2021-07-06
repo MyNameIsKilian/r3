@@ -28,6 +28,14 @@ game2.save!
 game3 = Game.new(name: 'World of Wartrash', description: 'Commence une aventure hors du commun dans un monde de déchets. Améliore ta poubelle et défis les autres joueurs.')
 game3.save!
 
+puts "Creating rounds for kiki"
+
+r1 = Round.new(game: game1, user: kiki, score: 1000)
+r1.save!
+
+r2 = Round.new(game: game1, user: kiki, score: 1)
+r2.save!
+
 puts 'Creating categories!'
 category1 = Category.new(name: 'plastique')
 category1.save!

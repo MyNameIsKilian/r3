@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :rounds, only: [:new, :create]
   end
 
+  resources :users, only: [:show]
   resources :researches, only: [:new, :create, :show]
 end

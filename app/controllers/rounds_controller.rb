@@ -1,7 +1,7 @@
 class RoundsController < ApplicationController
   def new
     @round = Round.new
-    @game = Game.find(params[:game_id])
+    find_game
   end
 
   def create
@@ -11,6 +11,10 @@ class RoundsController < ApplicationController
   end
 
   private
+
+  def find_game
+    @game = Game.find(params[:game_id])
+  end
 
   def round_params
     params.require(:round).permit(:score)

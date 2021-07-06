@@ -1,4 +1,6 @@
 class ResearchesController < ApplicationController
+  before_action :find_result, only: [:show]
+
   def new
     @research = Research.new
     @categories = Category.all
@@ -23,10 +25,13 @@ class ResearchesController < ApplicationController
   end
 
   def show
-    @research = Research.find(params[:id])
   end
 
   private
+
+  def find_result
+    @research = Research.find(params[:id])
+  end
 
   def research_params
     params.require(:research).permit(:query, :category_id)

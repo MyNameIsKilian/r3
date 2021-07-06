@@ -7,7 +7,7 @@
         <ul class="dropdown-menu">
           <li><%= link_to "Recycler", new_research_path, class: "dropdown-item" %></li>
           <li><%= link_to "Jouer", games_path, class: "dropdown-item" %></li>
-          <li><%= link_to "Mon compte", "#", class: "dropdown-item" %></li>
+          <li><%= link_to "Mon compte", user_path(@user), class: "dropdown-item" %></li>
           <li><%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
         </ul>
       </div>

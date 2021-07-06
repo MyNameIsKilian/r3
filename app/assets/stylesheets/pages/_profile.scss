@@ -1,0 +1,39 @@
+.profile {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient($my-green-transparent, $my-green-transparent), url(https://media.giphy.com/media/l0HlHgiDgsW2c32p2/giphy.gif);
+}
+
+.profile-hello {
+  display: flex;
+  flex-direction: column;
+//   justify-content: center;
+  text-align: center;
+  height: 675px;
+  color: white;
+  font-size: 28px;
+//   border: 5px solid purple;
+
+  #hello {
+    margin-top: 32px;
+    font-size: 44px;
+  }
+
+  .rounds {
+    // position: absolute;
+    // border: 5px solid blue;
+  }
+
+  .researches {
+    // position: absolute;
+    // border: 5px solid red;
+    position: relative;
+    top: 350px;
+  }
+}
